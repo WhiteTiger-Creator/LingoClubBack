@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="">
+<body>
+<br>
+
+<h2>lingoClub.org: your scheduled meeting was cancelled by a lingo leader</h2>
+<hr>
+<h3>The details of the meeting:</h3>
+
+Meeting date: {{ meeting.meeting_date }}<br/>
+Meeting time(hour:minute): {{ meeting.meeting_hour }}:{{ meeting.meeting_minute }}<br/>
+Meeting length: {{ meeting.meeting_length }} minutes<br/>
+Timezone: {{ meeting.timezone }}<br/>
+Reason of cancellation: {{ reason }}
+<hr>
+
+<h3>Username of the lingo leader:: {{ meeting.leader.owner.username }}</h3>
+The skill level of the training language: {{ meeting.leader.training_language_skill_level }}<br/>
+Introduction from {{ meeting.leader.owner.username }}:<br/>
+{{ meeting.leader.introduction }}<br/>
+<hr>
+
+<h3>Try another lingo leader or another time?</h3>
+<ul><a href="http://lingoclub.org">Click to request another the meeting.</a></ul>
+</body>
+</html>

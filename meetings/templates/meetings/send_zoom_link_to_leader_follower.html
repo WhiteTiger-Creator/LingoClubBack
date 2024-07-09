@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="">
+<body>
+<br>
+
+<h2>lingoClub.org: The Zoom meeting link is available!</h2>
+<hr>
+
+<h3>The details of the meeting:</h3>
+
+Meeting date: {{ meeting.meeting_date }}<br/>
+Meeting time(hour:minute): {{ meeting.meeting_hour }}:{{ meeting.meeting_minute }}<br/>
+Meeting length: {{ meeting.meeting_length }} minutes<br/>
+Timezone: {{ meeting.timezone }}<br/>
+Zoom link: <a href="{{ meeting.zoom_link }}">Clink this link to join the Zoom meeting.</a><br/>
+Training language: {{ meeting.training_language }}<br/>
+Communication language: {{ meeting.base_language }}<br/>
+
+<h3>Username of the lingo leader:: {{ meeting.leader.owner.username }}</h3>
+The skill level of the training language: {{ meeting.leader.training_language_skill_level }}<br/>
+Introduction from {{ meeting.leader.owner.username }}:<br/>
+{{ meeting.leader.introduction }}<br/>
+
+<h3>Username of the lingo follower:: {{ meeting.follower.owner.username }}</h3>
+The skill level of the training language: {{ meeting.follower.training_language_skill_level }}<br/>
+Introduction from {{ meeting.follower.owner.username }}:<br/>
+{{ meeting.follower.introduction }}<br/>
+
+<hr>
+<h3>Either the Lingo leader or the lingo follower can cancel the meeting at anytime.</h3>
+    <ul><a href="http://lingoclub.org/meetings/{{ meeting.id }}/cancel">Click to CANCEL this scheduled meeting.</a></ul>
+<hr>
+    <ul>
+        <li>The lingo leader will earn <span style="color:Tomato;"><strong>${{ earning }}</strong></span> after completing this meeting.</li>
+        <li>The lingo follower will pay <span style="color:Tomato;"><strong>$ 0.00</strong></span> after completing this meeting.</li>
+    </ul>
+</body>
+</html>

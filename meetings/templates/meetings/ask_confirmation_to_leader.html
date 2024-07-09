@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="">
+<body>
+<br>
+
+<h2>You received a meeting request from lingoClub.org and please confirm or reject.</h2>
+<hr>
+<h2>!!You may earn <span style="color:Tomato;"><strong>${{ earning }}</strong></span> after completing this meeting!!</h2>
+<h3>The details of the meeting:</h3>
+
+Meeting date: {{ meeting.meeting_date }}<br/>
+Meeting time(hour:minute): {{ meeting.meeting_hour }}:{{ meeting.meeting_minute }}<br/>
+Meeting length: {{ meeting.meeting_length }} minutes<br/>
+Timezone: {{ meeting.timezone }}<br/>
+
+<h3>Our club member:: {{ meeting.follower.owner.username }}</h3>
+Training language: {{ meeting.follower.training_language }}<br/>
+The skill level of the training language: {{ meeting.follower.training_language_skill_level }}<br/>
+Introduction from {{ meeting.follower.owner.username }}:<br/>
+{{ meeting.follower.introduction }}<br/>
+<hr>
+<h3>Please confirm or reject</h3>
+    <ul><a href="http://lingoclub.org/meetings/{{ meeting.id }}/confirm">Click to CONFIRM the meeting request.</a></ul>
+    <ul><a href="http://lingoclub.org/meetings/{{ meeting.id }}/reject">Click to REJECT the meeting request.</a></ul>
+<h3>You will receive a Zoom meeting link after the meeting is confirmed.</h3>
+</body>
+</html>
